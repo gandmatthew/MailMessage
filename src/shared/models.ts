@@ -1,5 +1,5 @@
 export type MessageInfo = {
-    title: string,
+    contact: string,
     lastEditTime: number
 }
 

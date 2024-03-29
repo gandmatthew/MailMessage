@@ -2,11 +2,11 @@ import { MessageInfo } from '@shared/models'
 
 export const messagesMock: MessageInfo[] = [
     {
-        title: "Adam",
+        contact: "Adam",
         lastEditTime: new Date().getTime()
     },
     {
-        title: "Bryan",
+        contact: "Bryan",
         lastEditTime: new Date().getTime()
     }
 ]
