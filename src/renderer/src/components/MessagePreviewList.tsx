@@ -1,10 +1,13 @@
+import { MessagePreview } from '@/components/MessagePreview'
 import { messagesMock } from '@/store/mocks'
+import { usedMessagesList } from '@renderer/hooks/useMessagesList'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { MessagePreview } from './MessagePreview'
 
 export const MessagePreviewList = ({ className, ...props}: ComponentProps<'ul'>) => {
-    if (messagesMock.length === 0) {
+    const {messages, selectedMessageIndex, handleMessageSelect} = usedMessagesList({})
+
+    if (messages.length === 0) {
         return (
         <ul className={twMerge('text-center pt-4', className)} {...props}>
             <span>No messages</span>
@@ -12,9 +15,14 @@ export const MessagePreviewList = ({ className, ...props}: ComponentProps<'ul'>)
         )
     }
     return (
-        <ul {...props}>
-            {messagesMock.map((message) => (
-                <MessagePreview key={message.contact + message.lastEditTime} {...message} />
+        <ul className={className} {...props}>
+            {messagesMock.map((message, index) => (
+                <MessagePreview 
+                key={message.contact + message.lastEditTime} {...message}
+                isActive={selectedMessageIndex === index}
+                onClick={handleMessageSelect(index)}
+                {...message}
+                />
             ))}
         </ul>
     )

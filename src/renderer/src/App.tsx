@@ -1,4 +1,5 @@
-import { ActionButtonsRow, Content, MessageBox, MessagePreviewList, RootLayout, SetupPreview, Sidebar } from "@/components";
+import { ActionButtonsRow, Content, MessagePreviewList, MessageTextbox, RootLayout, SetupPreview, Sidebar } from "@/components";
+import { MessageComposeView } from "./components/MessageComposeView";
 
 const isSetup = true;
 
@@ -14,7 +15,10 @@ const App = () => {
         </Sidebar>
 
         <Content className="border-l bg-neutral-900 border-l-white/20">
-          <MessageBox />
+          <div className="flex flex-col h-screen justify-between">
+            <MessageComposeView></MessageComposeView>
+            <MessageTextbox className="p-4 rounded-lg justify-between"/>
+          </div>
         </Content>
         
       </RootLayout> 
@@ -24,5 +28,14 @@ const App = () => {
     </>
   )
 }
+
+/*
+{messagesMock.map((message, index) => (
+                <MessagePreview 
+                key={message.contact + message.lastEditTime} {...message}
+                isActive={selectedMessageIndex === index}
+                onClick={handleMessageSelect(index)}
+                {...message}
+*/
 
 export default App
