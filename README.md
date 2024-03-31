@@ -1,5 +1,7 @@
 # electron-app
 
+![image](https://github.com/gandmatthew/MailMessage/assets/89164395/58307392-7e4c-4d13-97af-2c0e3fafe91a)
+
 An Electron application with React and TypeScript
 
 ## Recommended IDE Setup
