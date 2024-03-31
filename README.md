@@ -1,6 +1,7 @@
 # electron-app
 
-![image](https://github.com/gandmatthew/MailMessage/assets/89164395/58307392-7e4c-4d13-97af-2c0e3fafe91a)
+![image](https://github.com/gandmatthew/MailMessage/assets/89164395/62ecffb4-ce64-4dfa-b8a6-2e11e94ab75e)
+
 
 An Electron application with React and TypeScript
 
