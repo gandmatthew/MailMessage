@@ -1,4 +1,4 @@
-# electron-app
+# iMessage on Windows (Work in Progress)
 
 ![image](https://github.com/gandmatthew/MailMessage/assets/89164395/856a0047-1192-4b77-bd69-c6b45ee1cc16)
 
